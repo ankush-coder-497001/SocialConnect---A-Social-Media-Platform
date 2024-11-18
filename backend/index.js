@@ -11,9 +11,9 @@ app.use(cors());
 app.use(express.json());
 
 // DB connection
-// mongoose.connect(process.env.DBURL)
-//   .then(() => console.log('MongoDB connected'))
-//   .catch(err => console.log(err));
+mongoose.connect(process.env.DBURL)
+  .then(() => console.log('MongoDB connected'))
+  .catch(err => console.log(err));
 
 
 const PORT = process.env.PORT || 7001;
